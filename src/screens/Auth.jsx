@@ -12,14 +12,18 @@ function Auth() {
     e.preventDefault();
     if (username || password) {
       if (username === "Admin") {
-        dispatch({
-          type: "SET_USER",
-          user: {
-            name: "Admin",
-            permission: "all",
-            password: "Admin",
-          },
-        });
+        if (password === "Admin") {
+          dispatch({
+            type: "SET_USER",
+            user: {
+              name: "Admin",
+              permission: "all",
+              password: "Admin",
+            },
+          });
+        } else {
+          alert("Make sure Admin Credidentials are correct");
+        }
       } else {
         dispatch({
           type: "SET_USER",
