@@ -1,13 +1,170 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.auth {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.auth__box {
+  width: 50%;
+  padding: 35px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.auth__box > form {
+  width: 90%;
+  margin: 10px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form__control {
+  width: 75%;
+  flex: 1;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+.form__control > .input_box {
+  width: 95%;
+  background-color: #ccc;
+  margin-top: 10px;
+  height: 38px;
+}
+.form__control > .input_box > input {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  border: 1px solid #dbdbdb;
+  padding-left: 10px;
+}
+
+.btn__submit {
+  padding: 1.1rem;
+  width: 100px;
+  background-color: rgb(38, 0, 255);
+  outline: 0;
+  color: #fff;
+  font-weight: 400;
+  font-size: 18px;
+  border: 0;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  transition: all 0.2s ease-in-out;
+}
+.btn__submit:hover {
+  box-shadow: 1px 1px 40px 0px rgba(99, 47, 241, 0.5);
+}
+
+.fruits {
+  width: 100%;
+}
+.fruits__wrapper {
+  width: 90%;
+  margin: 65px auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 10px;
+  padding: 35px;
+  align-items: center;
+}
+.fruit__card {
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 35px;
+}
+.card__image {
+  width: 250px;
+  height: 80%;
+}
+.card__image > img {
+  height: 100%;
+  width: 100%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.fruit__counter {
+  text-align: center;
+  padding: 10px;
+  font-weight: 900;
+}
+.counter {
+  width: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+.counter > button {
+  width: 100px;
+  height: 48px;
+  font-size: 20px;
+  background-color: rgb(68, 0, 255);
+  outline: 0;
+  border: 0;
+  border-radius: 5px;
+  color: #fff;
+  font-weight: 900;
+}
+.disbaled__button {
+  background-color: #ccc !important;
+}
+
+.stack {
+  width: 100%;
+}
+.stack__wrapper {
+  width: 95%;
+  margin: 0 auto;
+}
+
+.stack__container {
+  width: 400px;
+  padding: 20px;
+  background-color: #ccc;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.item {
+  width: 100%;
+  padding: 10px;
+}
+
+nav {
+  width: 100%;
+  border-bottom: 1px solid #dbdbdb;
+}
+.nav__wrapper {
+  width: 90%;
+  margin: 0 auto;
+  height: 65px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media screen and (max-width: 768px) {
+  .auth__box {
+    width: 85%;
+  }
 }
