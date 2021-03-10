@@ -40,7 +40,7 @@ function Auth() {
     <div className="auth">
       <div className="auth__box">
         <h1>Login</h1>
-        <form action="#" onSubmit={handleLogin}>
+        <form onSubmit={handleLogin} method="post">
           <Input
             type="text"
             name="username"
