@@ -64,11 +64,15 @@ function Home() {
         <div className="fruits">
           <nav>
             <div className="nav__wrapper">
-              <a href="#">Intern</a>
+              <Link tp="/">Intern</Link>
               <div className="nav__link">
-                <a href="#" className="button__logout" onClick={handleLogout}>
+                <span
+                  to="/login"
+                  className="button__logout"
+                  onClick={handleLogout}
+                >
                   Logout
-                </a>
+                </span>
               </div>
             </div>
           </nav>

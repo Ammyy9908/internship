@@ -163,6 +163,11 @@ nav {
   justify-content: space-between;
   align-items: center;
 }
+.button__logout {
+  padding: 1.1rem;
+  display: inline-block;
+  cursor: pointer;
+}
 @media screen and (max-width: 768px) {
   .auth__box {
     width: 85%;

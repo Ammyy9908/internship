@@ -4,7 +4,7 @@ import { useStateValue } from "../StateProvider";
 import { useHistory } from "react-router-dom";
 
 function Auth() {
-  const [{ user }, dispatch] = useStateValue();
+  const [{}, dispatch] = useStateValue();
 
   const [username, setUsername] = React.useState("");
   const [password, setPassword] = React.useState("");
