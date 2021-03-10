@@ -1,8 +1,7 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import FruitCard from "../components/FruitCard";
 import { useStateValue } from "../StateProvider";
-import { useHistory } from "react-router-dom";
+import Auth from "./Auth";
 
 function Home() {
   const [apple, setApple] = React.useState(10);
@@ -11,14 +10,11 @@ function Home() {
 
   const [{ user, basket }, dispatch] = useStateValue();
 
-  const history = useHistory();
-
   const handleLogout = () => {
     dispatch({
       type: "SET_USER",
       user: null,
     });
-    history.push("/login");
   };
 
   const cards = [
@@ -64,13 +60,9 @@ function Home() {
         <div className="fruits">
           <nav>
             <div className="nav__wrapper">
-              <Link tp="/">Intern</Link>
+              <span>Intern</span>
               <div className="nav__link">
-                <span
-                  to="/login"
-                  className="button__logout"
-                  onClick={handleLogout}
-                >
+                <span className="button__logout" onClick={handleLogout}>
                   Logout
                 </span>
               </div>
@@ -108,10 +100,7 @@ function Home() {
           </div>
         </div>
       ) : (
-        <div>
-          <h1>You have to Login</h1>
-          <Link to="/login">Login</Link>
-        </div>
+        <Auth />
       )}
     </>
   );

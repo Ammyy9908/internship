@@ -1,17 +1,15 @@
 import React from "react";
 import Input from "../components/Input";
 import { useStateValue } from "../StateProvider";
-import { useHistory } from "react-router-dom";
 
 function Auth() {
-  const [dispatch] = useStateValue();
-
+  const [{ user }, dispatch] = useStateValue();
+  console.log(user);
   const [username, setUsername] = React.useState("");
   const [password, setPassword] = React.useState("");
 
-  const history = useHistory();
-
   const handleLogin = (e) => {
+    e.preventDefault();
     if (username || password) {
       if (username === "Admin") {
         dispatch({
@@ -32,15 +30,13 @@ function Auth() {
           },
         });
       }
-
-      history.push("/");
     }
   };
   return (
     <div className="auth">
       <div className="auth__box">
         <h1>Login</h1>
-        <form onSubmit={handleLogin} method="post">
+        <form onSubmit={handleLogin}>
           <Input
             type="text"
             name="username"
