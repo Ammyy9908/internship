@@ -21,18 +21,12 @@ const reducer = (state, action) => {
       };
 
     case "REMOVE_FROM_BASKET":
-      // const index = state.basket.findIndex(
-      //   (basketItem) => basketItem.id === action.id
-      // );
-
-      let color = action.color;
       let newBasket = [];
       newBasket = state.basket.splice(1);
 
       return {
         ...state,
         basket: newBasket,
-        flagRemove: state.flagRemove,
       };
 
     case "SET_USER":

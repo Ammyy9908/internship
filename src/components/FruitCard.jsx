@@ -1,8 +1,7 @@
-import React, { useEffect, useState } from "react";
 import { useStateValue } from "../StateProvider";
 
 function FruitCard({ img, initial, setIntitial, title, color }) {
-  const [{ user, basket, flagRemove }, dispatch] = useStateValue();
+  const [{ user, basket }, dispatch] = useStateValue();
   const handleIncrement = () => {
     setIntitial(initial + 1);
   };
