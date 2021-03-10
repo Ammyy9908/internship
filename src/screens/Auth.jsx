@@ -10,7 +10,7 @@ function Auth() {
 
   const handleLogin = (e) => {
     e.preventDefault();
-    if (username || password) {
+    if (username && password) {
       if (username === "Admin") {
         if (password === "Admin") {
           dispatch({

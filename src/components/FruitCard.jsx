@@ -46,7 +46,7 @@ function FruitCard({ img, initial, setIntitial, title, color }) {
       <span className="fruit__counter">{initial}</span>
       <div className="counter">
         {basket != null && user && user.name === "Admin" ? (
-          <button onClick={addToBasket}>+</button>
+          <button onClick={initial > 0 && addToBasket}>+</button>
         ) : (
           <button onClick={handleNonAdmin}>+</button>
         )}
